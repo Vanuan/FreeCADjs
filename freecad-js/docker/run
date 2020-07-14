@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+cd $(dirname $0)
+docker-compose -f docker-compose.yml build node
+docker-compose -f docker-compose.yml run --no-deps --rm node $@
